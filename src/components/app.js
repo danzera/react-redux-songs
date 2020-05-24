@@ -1,13 +1,13 @@
 import React from 'react';
+// webpack automatically imports the index.js file, just need to reference the directory, not the file
+import actions from '../actions';
 
-class App extends React.Component {
-	render() {
-		return (
-			<div className="app">
-				Hey, there.
-			</div>
-		);
-	}
+const App = () => {
+	return (
+		<div className="app">
+			Hey, there.
+		</div>
+	);
 }
 
 export default App;
