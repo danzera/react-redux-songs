@@ -5,8 +5,13 @@ class SongList extends Component {
 	getSongList() {
 		return this.props.songs.map((song, index) => {
 			return (
-				<div className="song" key={index}>
-					{song.title}
+				<div className="song item" key={index}>
+					<div className="right floated content">
+						<button className="ui button primary">Select</button>
+					</div>
+					<div className="content">
+						{song.title}
+					</div>
 				</div>
 			);
 		});
@@ -16,7 +21,7 @@ class SongList extends Component {
 		const songList = this.getSongList();
 		
 		return (
-			<div className="song-list">
+			<div className="song-list ui divided list">
 				{songList}
 			</div>
 		);
