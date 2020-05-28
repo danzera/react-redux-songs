@@ -1,7 +1,6 @@
 import React from 'react';
-// webpack automatically imports the index.js file, just need to reference the directory, not the file
-import actions from '../actions';
 import SongList from './songList';
+import SongDetail from './songDetail';
 
 const App = () => {
 	return (
@@ -9,6 +8,9 @@ const App = () => {
 			<div className="ui row">
 				<div className="column eight wide">
 					<SongList />
+				</div>
+				<div className="column eight wide">
+					<SongDetail />
 				</div>
 			</div>
 		</div>
