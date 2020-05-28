@@ -1,14 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-// song passed in from 
+// song passed in from state via mapStateToProps and connect functions below
 const SongDetail = ({ song }) => {
+	// conditionally render content if no song has been selected
 	if (!song) {
 		return (
 			<div className="song-detail">Select a song</div>
 		);
 	}
 
+	// content to render if a song has already been selected
 	return (
 		<div className="song-detail">
 			<h3>Details for:</h3>
